@@ -1,0 +1,159 @@
+@import "reset.css";
+@import "fonts.css";
+
+
+:root {
+    --swiper-theme-color: #FF6632 !important;
+    --orange: #FF6632;
+    --lightGrey: #F5F5F5;
+    --middleGrey: #494949;
+    --darkGrey: #ffffff;
+    --background: #FF6632;
+    --white: #FFFFFF;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+
+    --normalRadius: 0.8rem;
+    --buttonRadius: 0.4rem
+}
+
+html,
+body {
+    background: black;
+}
+
+#app {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+.PersonPanel {
+    /*border-radius: 0.9375rem;*/
+    background: linear-gradient(0deg, rgba(255, 102, 50, 0.05) 0%, rgba(255, 102, 50, 0.05) 100%), rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(15px);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    width: 25vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+}
+
+
+.addSpace {
+    height: 25vh;
+}
+
+
+
+.slide-enter-from {
+    opacity: 0;
+    /*transform: translateX(100%);*/
+}
+
+.slide-enter-active {
+    transition: all 0.25s ease-in;
+}
+
+.slide-enter-to {
+    opacity: 1;
+
+}
+
+.slide-leave-from {
+    opacity: 1;
+}
+
+.slide-leave-active {
+    transition: all 0.25s ease-out;
+}
+
+.slide-leave-to {
+    opacity: 0;
+    /*transform: translateX(100%);*/
+
+}
+
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+}
+
+.fade-leave-from, .fade-enter-to {
+    opacity: 1;
+}
+
+.fade-leave-active {
+    transition: all 0.5s ease-out;
+}
+ .fade-enter-active {
+    transition: all 0.5s ease-out var(--delay);
+}
+
+
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.25s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+}
+
+
+
+* {
+  --sb-track-color: #2c3235;
+  --sb-thumb-color: #d8d8d8;
+  --sb-size: 7px;
+
+  scrollbar-color: var(--sb-thumb-color)
+                   var(--sb-track-color);
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 7px;
+
+  }
+
+
+
+* {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
+.text a{
+    pointer-events: none;
+}
+
